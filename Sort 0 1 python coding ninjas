@@ -1,0 +1,23 @@
+def sort(arr,l):
+    count=0
+    for i in range(l):
+        if(arr[i]==0):
+           count+=1
+        
+        
+        
+    for j in range(count):
+        print(0,end=" ")
+        
+    for k in range(l-count):
+        print(1,end=" ")
+        
+    print()
+           
+n=int(input())
+t=1
+while t<=n:
+    l=int(input())
+    arr=[int(x) for x in input().split()]
+    sort(arr,len(arr))
+    t+=1
