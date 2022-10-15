@@ -1,0 +1,26 @@
+ 
+def pairSum(ar, l, x):
+    count=0
+    for i in range(0, l-2,1):
+        for j in range(i+1,l-1,1):
+            for k in range(j+1,l,1):
+                if (ar[i]+ar[j]+ar[k] == x):
+                           count=count+1
+                
+    return count
+                
+                
+                
+                
+                
+                
+n = int(input())
+t=1
+while t<=n:
+    
+ l=int(input())
+ ar = [int(x) for x in input().split()]
+ x = int(input())
+ z=pairSum(ar, len(ar), x) 
+ print(z)
+ t+=1
