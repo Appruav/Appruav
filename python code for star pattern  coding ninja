@@ -1,0 +1,36 @@
+n=int(input())
+first_half=(n+1)//2
+second_half=n//2
+row=1
+while row<=first_half:
+      spaces=0
+      while spaces<=row-1:
+        if (spaces==0):
+            spaces+=1
+            continue
+        else:
+            print(" ",end="")
+            spaces+=1
+      col=1
+      while col<=row:
+        print("*",end=" ")
+        col+=1
+      print()
+      row=row+1
+        #second half
+        
+
+row=second_half
+spaces=second_half
+while row>=0:
+      spaces=row
+      while spaces>1:
+        print(" ",end="")
+        spaces-=1
+      j=1
+      while j<=row:
+           print("*",end=" ")
+           j=j+1
+      print()
+      row-=1
+      
