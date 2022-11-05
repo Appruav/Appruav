@@ -1,0 +1,41 @@
+def unique(n):
+    global j
+    x=1
+    while x<=n:
+    
+     l=int(input())
+     li=[int(y) for y in input().split()]
+     for i in range(l):
+             
+                for j in range(l):
+                    if(i==j):
+                        continue
+                    if(li[i]==li[j]):
+                        break
+                        
+                    
+                if(j==l):
+                   print(arr[i])
+      
+       
+                
+                     
+                    
+            
+     
+    x+=1
+    
+    
+    
+    
+    
+n=int(input())
+y=1
+
+while y<=n:
+     unique(n)
+     y+=1
+
+
+
+        
