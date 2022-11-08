@@ -1,33 +1,22 @@
-
-def duplciate(n):
-x=1
-while x<=n:
-
- l=int(input())
- li=[int(y) for y in input().split()]
- if(len(li)==l):
-    for i in range(l):
-        
-        for j in range(l):
-            if(i==j):
-                continue
-            elif(li[i]==li[j]):
-                    print(li[i])
-                    return 
+def duplciate(n): 
+     l=int(input())
+     li=[int(y) for y in input().split()]
+     if(len(li)==l):
+        for i in range(l):
             
-               
-                    
-            else:
-                 continue
-    break
-    
- else:
-    break
-x+=1
+            for j in range(l):
+                if(i==j):
+                    continue
+                elif(li[i]==li[j]):
+                        print(li[i])
+                        return     
 n=int(input())
 y=1
 
 while y<=n:
-duplciate(n)
-y+=1
+     duplciate(n)
+     y+=1
 
+
+
+        
