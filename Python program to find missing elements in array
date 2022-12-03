@@ -1,0 +1,18 @@
+n=int(input())
+arr=[]
+li=[]
+for i in range(n):
+    x=int(input())
+    arr.append(x)
+    
+for i in range(1,n+1):
+    for j in range(n):
+        if(arr[j]==i):
+            break
+        
+    else:
+        li.append(i)
+        
+        
+print(li)
+        
