@@ -1,0 +1,16 @@
+def uniq(arr,l):
+    for i in range(l):
+        for j in range(l):
+            if(i==j):
+                continue
+            elif(arr[i]==arr[j]):
+                 break
+
+        else:
+            return arr[i]
+n=int(input())
+while n>0:
+    x=int(input())
+    arr=[int (x) for x in input().split()]
+    print(uniq(arr,x))
+    n-=1
