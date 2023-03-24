@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+#define ROCK 1
+#define PAPER 2
+#define SCISSORS 3
+
+int main() {
+    int player_score = 0;
+    int computer_score = 0;
+    int rounds = 0;
+    srand(time(NULL));
+    printf("Welcome to Stone Paper Scissors!\n");
+    while (1) {
+        printf("\nRound %d\n", rounds + 1);
+        printf("Your score: %d\n", player_score);
+        printf("Computer score: %d\n", computer_score);
+        printf("Enter your choice (1=Rock, 2=Paper, 3=Scissors): ");
+        int player_choice;
+        scanf("%d", &player_choice);
+        while (player_choice < ROCK || player_choice > SCISSORS) {
+            printf("Invalid choice! Enter your choice again (1=Rock, 2=Paper, 3=Scissors): ");
+            scanf("%d", &player_choice);
+        }
+        int computer_choice = rand() % 3 + 1;
+        printf("Computer chooses %d\n", computer_choice);
+        if (player_choice == computer_choice) {
+            printf("It's a tie!\n");
+        } else if (player_choice == ROCK && computer_choice == SCISSORS || player_choice == PAPER && computer_choice == ROCK || player_choice == SCISSORS && computer_choice == PAPER) {
+            printf("You win this round!\n");
+            player_score++;
+        } else {
+            printf("Computer wins this round!\n");
+            computer_score++;
+        }
+        rounds++;
+        if (player_score == 3) {
+            printf("\nCongratulations! You win the game!\n");
+            break;
+        } else if (computer_score == 3) {
+            printf("\nSorry, you lose the game!\n");
+            break;
+        }
+    }
+    return 0;
+}
